@@ -33,7 +33,7 @@ Please select one of the links below to download related  Saliency Object Detect
 After downloading, **unzip** them into `dataset` folder
 
 
-## Training
+## Train and test
 
 To train the model in the paper, run this command:
 
@@ -101,12 +101,12 @@ Our model achieves the following performance on :
 
 You can download our testing result here:
 
-- [BaiduDisk](https://pan.baidu.com/s/11S0V1pD776X-Tt-ysQp8RQ): (code: gsqy) 
-- [GoogleDisk](https://drive.google.com/file/d/1pcE1_dfNsZsuPjt7u5ow8futmLXJ5C1E/view?usp=sharing)
+- [BaiduDisk](https://pan.baidu.com/s/1MLO2QK7uRXS7OqCVcS7COA): (code: 0011) 
+- [GoogleDisk](https://drive.google.com/file/d/1JXuOY_6OL21tLaxQlWFToUaARl4rAjB1/view?usp=sharing)
 
 ## Contributing
 
-If you have any questions, feel free to contact me via: `***@163.com`.
+If you have any questions, feel free to contact me via: `***@163.com`（）.
 
 Thanks list:
 
