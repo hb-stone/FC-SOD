@@ -179,11 +179,7 @@ class Configuration(EasyDict):
             'test',
             self.DATASET_TEST_DIR if len(self.DATASET_TEST_DIR) != 0 else self.DATASET_NAME
         )
-        # handle AUXILIARY_DATASET_NAME
-        if self.AUXILIARY_DATASET_NAME is not None:
-            tmp_dict = get_dataset_path_by_name(self.AUXILIARY_DATASET_NAME)
-            self.AUXILIARY_DATASET_TEST_ROOT = tmp_dict['test_dir_path']
-            self.AUXILIARY_DATASET_TEST_LIST_PATH = tmp_dict['test_lst_path']
+        
         # handle EVALUATOR_DIR
         if self.EVALUATOR_DIR is None:
             self.EVALUATOR_DIR = self.TEST_IMG_SAVE_PATH

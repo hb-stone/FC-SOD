@@ -83,20 +83,7 @@ def train(config:Configuration) -> None:
                                            sampler=train_gt_sampler, num_workers=config.BATCH_SIZE // 2, pin_memory=True)
         semi_loader = SOD_Dataloader(sal_dataset,batch_size=config.BATCH_SIZE, \
                                            sampler=semi_sampler, num_workers=config.BATCH_SIZE // 2, pin_memory=True)
-        if config.AUXILIARY_DATASET_NAME:
-            auxiliary_sal_dataset = SaliencyDataSet(config.AUXILIARY_DATASET_TEST_ROOT, \
-                                                    config.AUXILIARY_DATASET_TEST_LIST_PATH, \
-                                                    ignore_value=255.0,\
-                                                    crop_size=(crop_size,crop_size),\
-                                                    is_random_flip=True,is_scale=False)
-            auxiliary_sal_dataset_len = len(auxiliary_sal_dataset)
-            diff_len = (dataset_size-partial_size) - auxiliary_sal_dataset_len
-            if diff_len > 0:
-                auxiliary_sal_dataset += sal_dataset[idx[partial_size:]][:diff_len]
-            del semi_loader
-            del semi_sampler
-            semi_loader = SOD_Dataloader(auxiliary_sal_dataset, batch_size=config.BATCH_SIZE, \
-                                         shuffle=True, num_workers=config.BATCH_SIZE // 2, pin_memory=True)
+
         train_full_wraper = TrainDataWrapper(
             train_full_loader,
             lambda_adv=config.LAMBDA_PRED_ADV,
