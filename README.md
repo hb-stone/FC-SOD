@@ -38,7 +38,7 @@ After downloading, **unzip** them into `dataset` folder
 To train the model in the paper, run this command:
 
 ```train
-python run.py -pretrain ./pretrained/resnet101COCO-41f33a49.pth -d DUTS -save <saved dir name in logs> -gpu <you GPU number> -part 0.1 -idx ./pretrained/train_id.pkl -l_semi_sal 1 -l_pred_adv 0.01 -l_semi_adv 0.007 -proc AdvSaliency
+python run.py -pretrain ./pretrained/resnet101COCO-41f33a49.pth -d DUTS -save <saved dir name in logs> -gpu <you GPU number> -part 0.1 -idx ./pretrained/train_id.pkl -l_semi_sal 1 -l_pred_adv 0.01 -l_semi_adv 0.007 -proc FC-SOD
 ```
 
 > Note: 
