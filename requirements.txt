@@ -3,5 +3,5 @@ pytablewriter==0.50.0
 setproctitle==1.1.10
 tqdm==4.43.0
 portalocker==1.5.2
-numpy==1.16.6
+numpy==1.22.0
 opencv_python==4.2.0.32
